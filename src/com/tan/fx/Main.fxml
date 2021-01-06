@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.Button?>
+
+<!--控件映射到com.tan.fx.MainController-->
+<!--通过onAction映射到Controller的方法-->
+<!--Controller变量通过加注解@FXML映射到这里的控件-->
+<AnchorPane fx:id="rootView" prefHeight="650.0" prefWidth="720.0" style="-fx-background-color: #CCCCCC" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tan.fx.MainController">
+    <children>
+        <Label fx:id="head" layoutX="279.0" layoutY="14.0"  text="坐标范围查询工具(v1.0)" />
+        <Label layoutX="38.0" layoutY="51.0" text="坐标边界(多个边界用逗-隔开)：" />
+        <TextArea fx:id="bianjie" wrapText="true"  layoutX="38.0" layoutY="80.0" prefHeight="300" prefWidth="648.0" />
+
+        <Label layoutX="38.0" layoutY="395.0" text="查询坐标(经度,纬度)：" />
+        <TextField fx:id="textFiled" layoutX="180.0" layoutY="393" prefHeight="23.0" prefWidth="415.0" />
+        <Button fx:id="openButton" layoutX="608.0" layoutY="393.0" mnemonicParsing="false" onAction="#clickButton" prefHeight="23.0" prefWidth="80.0" text="查询" />
+
+        <Label layoutX="38.0" layoutY="435.0" text="操作记录:" />
+<!--        <Button fx:id="cleanButton" layoutX="525.0" layoutY="435.0" mnemonicParsing="false" onAction="#clickCleanButton" prefHeight="23.0" prefWidth="163.0" text="清空记录" />-->
+        <TextArea fx:id="logTextArea" editable="false" layoutX="38.0" layoutY="470.0" prefHeight="150.0" prefWidth="648.0" />
+
+    </children>
+
+</AnchorPane>
